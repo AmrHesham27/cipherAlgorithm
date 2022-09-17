@@ -7,6 +7,9 @@
  * #abdul_key
  * #abdul_container
  */
+$('#abdul_shift_buton').click(function () {
+    $('#abdul_text').val( $('#form-result-abdul').text() );
+});
 
 $('#abdul_encrypt_buton').click(function () {
     $('#abdul_type').val('E');
@@ -40,11 +43,10 @@ $(document).ready(function () {
                 $("#abdul_decrypt_button").text("Decrypt");
                 if (data.status == 'true') {
                     $("#abdul_container").html(
-                        '<div id="form-result" class="text-center alert alert-success w-100" role="alert">' +
+                        '<div id="form-result-abdul" class="text-center alert alert-success w-100" role="alert">' +
                         data.data +
                         '</div>'
                     );
-                    $("#abdul_text").val(data.data);
                 } else {
                     $("#abdul_container").html(
                         '<div id="form-result" class="text-center alert alert-danger w-100" role="alert">' +

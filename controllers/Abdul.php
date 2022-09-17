@@ -14,7 +14,7 @@
         }
 
         function setTable () {
-            $this->key = array_unique(str_split((trim($this->key)))); 
+            $this->key = array_unique(str_split(strtoupper(trim($this->key)))); 
             $all_letters = array();
             foreach($this->key as $letter){
                 array_push($all_letters, $letter);

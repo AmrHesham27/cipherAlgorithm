@@ -134,6 +134,12 @@ End Fixed Navigation
                                 Encrypt
                             </button>
                             <button 
+                                id="abdul_shift_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="button" 
+                            >
+                                Shift
+                            </button>
+                            <button 
                                 id="abdul_decrypt_button" class="btn btn-main font-weight-bold"
                                 type="submit" 
                             >
@@ -244,6 +250,12 @@ End Fixed Navigation
                                 type="submit" 
                             >
                                 Encrypt
+                            </button>
+                            <button 
+                                id="aes_shift_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="button" 
+                            >
+                                Shift
                             </button>
                             <button 
                                 id="aes_decrypt_button" class="btn btn-main font-weight-bold"

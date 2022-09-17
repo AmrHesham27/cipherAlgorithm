@@ -7,8 +7,11 @@
  * #aes_key
  * #aes_container
  */
+ $('#aes_shift_buton').click(function () {
+    $('#aes_text').val( $('#form-result-aes').text() );
+});
 
- $('#aes_encrypt_buton').click(function () {
+$('#aes_encrypt_buton').click(function () {
     $('#aes_type').val('E');
 });
 $('#aes_decrypt_button').click(function () {
@@ -40,12 +43,11 @@ $(document).ready(function () {
                 $('#aes_decrypt_button').text("Decrypt");
                 if (data.status == 'true') {
                     $("#aes_container_success").html(
-                        '<div id="form-result" class="text-center alert alert-success w-100" role="alert">' +
+                        '<div id="form-result-aes" class="text-center alert alert-success w-100" role="alert">' +
                         data.data +
                         '</div>'
                     );
                     $("#aes_container_error").html('');
-                    $("#aes_text").val(data.data);
                 } else {
                     $("#aes_container_error").html(
                         '<div id="form-result" class="text-center alert alert-danger w-100" role="alert">' +

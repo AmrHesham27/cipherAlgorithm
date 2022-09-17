@@ -4,6 +4,8 @@ class AES {
     public $method = "AES-256-CBC";
 
     function encrypt($plaintext, $password) {
+        $password = strtoupper(trim($password));
+        
         $key = hash('sha256', $password, true);
         $iv = openssl_random_pseudo_bytes(16);
     
@@ -14,6 +16,8 @@ class AES {
     }
     
     function decrypt($ivHashCiphertext, $password) {
+        $password = strtoupper(trim($password));
+
         $ivHashCiphertext = urldecode($ivHashCiphertext);
         $iv = substr($ivHashCiphertext, 0, 16);
         $hash = substr($ivHashCiphertext, 16, 32);

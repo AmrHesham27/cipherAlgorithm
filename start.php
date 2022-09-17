@@ -110,57 +110,31 @@ End Fixed Navigation
                 <div class="col-lg-12">
 
                     <blockquote class="p-3 mt-5">
-                        <h4>Abdulrahman Encryption</h4>
+                        <h4>Abdulrahman Algorithm</h4>
                     </blockquote>
 
-                    <p>Enter a message and a key to encrypt the message using Abdulrahman cipher</p>
+                    <p>Enter a message and a key to encrypt/decrypt the message using Abdulrahman algorithm</p>
 
-                    <form id="encrypt_form" action="./forms/abdul_encrypt.php" method="post" novalidate="novalidate">
+                    <form id="abdul_form" action="./forms/Abdul.php" method="post" novalidate="novalidate">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="encrypt_message" placeholder="Message" name="message">                               
+                            <input type="text" class="form-control" id="abdul_text" placeholder="Message" name="message">                               
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="encrypt_key" placeholder="Key" name="key">
+                            <input type="text" class="form-control" id="abdul_key" placeholder="Key" name="key">
                         </div>
+
+                        <input hidden id="abdul_type" name="abdul_type" />
 
                         <div class="input-group mb-3">
                             <button 
-                                id="encrypt_button" class="btn btn-main font-weight-bold"
+                                id="abdul_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
                                 type="submit" 
                             >
                                 Encrypt
                             </button>
-                        </div>
-                    </form>
-
-                    <div id="encrypt_container">
-                    </div>
-
-
-                </div>
-
-
-                <div class="col-lg-12 my-5">
-
-                    <blockquote class="p-3 mt-5">
-                        <h4>Abdulrahman Decryption</h4>
-                    </blockquote>
-
-                    <p>Enter a message and a key to decrypt the message using Abdulrahman cipher</p>
-
-                    <form id="decrypt_form" action="./forms/abdul_encrypt.php" method="post" novalidate="novalidate">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="decrypt_message" placeholder="Message" name="message">                               
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="decrypt_key" placeholder="Key" name="key">
-                        </div>
-
-                        <div class="input-group mb-3">
                             <button 
-                                id="decrypt_button" class="btn btn-main font-weight-bold"
+                                id="abdul_decrypt_button" class="btn btn-main font-weight-bold"
                                 type="submit" 
                             >
                                 Decrypt
@@ -168,10 +142,122 @@ End Fixed Navigation
                         </div>
                     </form>
 
-                    <div id="decrypt_container">
+                    <div id="abdul_container">
                     </div>
+                </div>
+                <!-- <div class="col-lg-12 mt-5">
 
+                    <blockquote class="p-3 mt-5">
+                        <h4>T&M Algorithm</h4>
+                    </blockquote>
 
+                    <p>Enter a message and a key to encrypt/decrypt the message using T&M algorithm</p>
+
+                    <form id="tm_form" action="./forms/TM.php" method="post" novalidate="novalidate">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="tm_text" placeholder="Message" name="message">                               
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="tm_key" placeholder="Key" name="key">
+                        </div>
+
+                        <input hidden id="tm_type" name="tm_type" />
+
+                        <div class="input-group mb-3">
+                            <button 
+                                id="tm_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="submit" 
+                            >
+                                Encrypt
+                            </button>
+                            <button 
+                                id="tm_decrypt_button" class="btn btn-main font-weight-bold"
+                                type="submit" 
+                            >
+                                Decrypt
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="tm_container" style="word-break: break-all;">
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-12 my-5">
+
+                    <blockquote class="p-3 mt-5 py-3">
+                        <h4>A.D Algorithm</h4>
+                    </blockquote>
+
+                    <p>Enter a message and a key to encrypt/decrypt the message using A.D algorithm</p>
+
+                    <form id="ad_form" action="./forms/AD.php" method="post" novalidate="novalidate">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="ad_text" placeholder="Message" name="message">                               
+                        </div>
+
+                        <input hidden id="ad_type" name="ad_type" />
+
+                        <div class="input-group mb-3">
+                            <button 
+                                id="ad_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="submit" 
+                            >
+                                Encrypt
+                            </button>
+                            <button 
+                                id="ad_decrypt_button" class="btn btn-main font-weight-bold"
+                                type="submit" 
+                            >
+                                Decrypt
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="ad_container_success" role="alert">
+                    </div>
+                    <div id="ad_container_error" role="alert">
+                    </div>
+                </div> -->
+                <div class="col-lg-12 my-5">
+
+                    <blockquote class="p-3 mt-5 py-3">
+                        <h4>AES Algorithm</h4>
+                    </blockquote>
+
+                    <p>Enter a message and a key to encrypt/decrypt the message using AES algorithm</p>
+
+                    <form id="aes_form" action="./forms/AES.php" method="post" novalidate="novalidate">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="aes_text" placeholder="Message" name="message">                               
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="aes_key" placeholder="Key" name="key">
+                        </div>
+
+                        <input hidden id="aes_type" name="aes_type" />
+
+                        <div class="input-group mb-3">
+                            <button 
+                                id="aes_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="submit" 
+                            >
+                                Encrypt
+                            </button>
+                            <button 
+                                id="aes_decrypt_button" class="btn btn-main font-weight-bold"
+                                type="submit" 
+                            >
+                                Decrypt
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="aes_container_success" role="alert" style="word-break: break-all;">
+                    </div>
+                    <div id="aes_container_error" role="alert">
+                    </div>
                 </div>
             </div>
         </div>
@@ -184,7 +270,7 @@ End Fixed Navigation
     <!--
 Footer
 ==================================== -->
-    <footer id="footer" class="bg-one">
+    <footer id="footer" >
         <div class="container">
             <div class="row wow fadeInUp" data-wow-duration="500ms">
                 <div class="col-lg-12">
@@ -231,109 +317,11 @@ Footer
     <script src="plugins/wow/wow.min.js"></script>
     <!-- Custom js -->
     <script src="js/script.js"></script>
-    <!-- Submit encryption form -->
-    <script>
-        $(document).ready(function() {
-            $('#encrypt_form').validate({
-                rules: {
-                    message: {
-                        required: true
-                    },
-                    key: {
-                        required: true,
-                    }
-                },
-                messages: {
-                    message: 'Please enter Message.',
-                    key: 'Please enter key'
-                },
-                submitHandler: function(form) {
-                    console.log(1);
-                    $("#encrypt_button").text("...Loading");
-                    var formData = {
-                        message: $("#encrypt_message").val(),
-                        key: $("#encrypt_key").val(),
-                    };
-
-                    $.ajax({
-                        type: "POST",
-                        url: "forms/abdul_encrypt.php",
-                        data: formData,
-                        dataType: "json",
-                        encode: true,
-                    }).done(function(data) {
-                        console.log(1);
-                        $("#encrypt_button").text("Encrypt");
-                        if (data.status == 'true') {
-                            $("#encrypt_container").html(
-                                '<div id="form-result" class="text-center alert alert-success w-100" role="alert">' +
-                                data.data +
-                                '</div>'
-                            );
-                        } else {
-                            $("#encrypt_container").html(
-                                '<div id="form-result" class="text-center alert alert-danger w-100" role="alert">' +
-                                data.data +
-                                '</div>'
-                            );
-                        }
-                    });
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#decrypt_form').validate({
-                rules: {
-                    message: {
-                        required: true
-                    },
-                    key: {
-                        required: true,
-                    }
-                },
-                messages: {
-                    message: 'Please enter Message.',
-                    key: 'Please enter key'
-                },
-                submitHandler: function(form) {
-                    console.log(1);
-                    $("#decrypt_button").text("...Loading");
-                    var formData = {
-                        message: $("#decrypt_message").val(),
-                        key: $("#decrypt_key").val(),
-                    };
-
-                    $.ajax({
-                        type: "POST",
-                        url: "forms/abdul_decrypt.php",
-                        data: formData,
-                        dataType: "json",
-                        encode: true,
-                    }).done(function(data) {
-                        console.log(1);
-                        $("#decrypt_button").text("Decrypt");
-                        if (data.status == 'true') {
-                            $("#decrypt_container").html(
-                                '<div id="form-result" class="text-center alert alert-success w-100" role="alert">' +
-                                data.data +
-                                '</div>'
-                            );
-                        } else {
-                            $("#decrypt_container").html(
-                                '<div id="form-result" class="text-center alert alert-danger w-100" role="alert">' +
-                                data.data +
-                                '</div>'
-                            );
-                        }
-                    });
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
+    <!-- Submit Forms -->
+    <script src="js/forms/Abdul.js"></script>
+    <!-- <script src="js/forms/TM.js"></script>
+    <script src="js/forms/AD.js"></script> -->
+    <script src="js/forms/AES.js"></script>
 </body>
 
 </html>

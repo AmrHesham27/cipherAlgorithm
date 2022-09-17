@@ -14,7 +14,7 @@
         }
 
         function setTable () {
-            $this->key = array_unique(str_split(strtoupper($this->key))); 
+            $this->key = array_unique(str_split((trim($this->key)))); 
             $all_letters = array();
             foreach($this->key as $letter){
                 array_push($all_letters, $letter);
@@ -45,7 +45,7 @@
         }
 
         function handleMessage() {
-            $this->message = str_split(strtoupper($this->message));
+            $this->message = str_split(strtoupper(trim($this->message)));
         }
 
         function get_Y_and_X ($letter) {
@@ -123,7 +123,7 @@
         }
     }
 
-    /* $abdul = new Abdul;
-    $abdul->encrypt('ALI', 'FOOD');
-    $abdul->decrypt('UDV', 'FOOD'); */
+    /* $newAbdul = new Abdul();
+    //echo $newAbdul->encrypt('Amr', 'FOOD');
+    echo $newAbdul->decrypt('UAGZ', 'FOOD'); */
 ?>

@@ -104,7 +104,7 @@ Fixed Navigation
 End Fixed Navigation
 ==================================== -->
 
-    <section class="sectionY section about-2 padding-0 bg-dark" id="about">
+    <section class="sectionY section about-2 padding-0" id="about">
         <div class="container-fluid p-0">
             <div class="row no-gutters align-items-center">
                 <div class="col-lg-6">
@@ -357,7 +357,7 @@ Start Call To Action
 
     <!-- end Contact Area
 ========================================== -->
-    <footer id="footer" class="bg-one">
+    <footer id="footer" >
         <div class="container">
             <div class="row wow fadeInUp" data-wow-duration="500ms">
                 <div class="col-lg-12">

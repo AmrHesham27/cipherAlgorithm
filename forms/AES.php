@@ -6,7 +6,7 @@ require '../controllers/AES.php';
 if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['aes_type'] == 'E' ) {
     if( 
         $_POST['message'] != '' 
-        && $_POST['key'] != '' 
+        || $_POST['key'] != '' 
     ) {
         // refuse numbers, spaces and special letters
         if(!ctype_alpha($_POST['message'])){
@@ -45,7 +45,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['aes_type'] == 'E' ) {
 elseif( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['aes_type'] == 'D'  ) {
     if( 
         $_POST['message'] != '' 
-        && $_POST['key'] != '' 
+        || $_POST['key'] != '' 
     ) {
         // encrypt
         $new_AES = new AES();

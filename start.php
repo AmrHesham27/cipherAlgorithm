@@ -151,80 +151,6 @@ End Fixed Navigation
                     <div id="abdul_container">
                     </div>
                 </div>
-                <!-- <div class="col-lg-12 mt-5">
-
-                    <blockquote class="p-3 mt-5">
-                        <h4>T&M Algorithm</h4>
-                    </blockquote>
-
-                    <p>Enter a message and a key to encrypt/decrypt the message using T&M algorithm</p>
-
-                    <form id="tm_form" action="./forms/TM.php" method="post" novalidate="novalidate">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="tm_text" placeholder="Message" name="message">                               
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="tm_key" placeholder="Key" name="key">
-                        </div>
-
-                        <input hidden id="tm_type" name="tm_type" />
-
-                        <div class="input-group mb-3">
-                            <button 
-                                id="tm_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
-                                type="submit" 
-                            >
-                                Encrypt
-                            </button>
-                            <button 
-                                id="tm_decrypt_button" class="btn btn-main font-weight-bold"
-                                type="submit" 
-                            >
-                                Decrypt
-                            </button>
-                        </div>
-                    </form>
-
-                    <div id="tm_container" style="word-break: break-all;">
-                    </div>
-                </div> -->
-                <!-- <div class="col-lg-12 my-5">
-
-                    <blockquote class="p-3 mt-5 py-3">
-                        <h4>A.D Algorithm</h4>
-                    </blockquote>
-
-                    <p>Enter a message and a key to encrypt/decrypt the message using A.D algorithm</p>
-
-                    <form id="ad_form" action="./forms/AD.php" method="post" novalidate="novalidate">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="ad_text" placeholder="Message" name="message">                               
-                        </div>
-
-                        <input hidden id="ad_type" name="ad_type" />
-
-                        <div class="input-group mb-3">
-                            <button 
-                                id="ad_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
-                                type="submit" 
-                            >
-                                Encrypt
-                            </button>
-                            <button 
-                                id="ad_decrypt_button" class="btn btn-main font-weight-bold"
-                                type="submit" 
-                            >
-                                Decrypt
-                            </button>
-                        </div>
-                    </form>
-
-                    <div id="ad_container_success" role="alert">
-                    </div>
-                    <div id="ad_container_error" role="alert">
-                    </div>
-                </div> -->
                 <div class="col-lg-12 my-5">
 
                     <blockquote class="p-3 mt-5 py-3">
@@ -271,6 +197,84 @@ End Fixed Navigation
                     <div id="aes_container_error" role="alert">
                     </div>
                 </div>
+                <div class="col-lg-12 my-5">
+
+                    <blockquote class="p-3 mt-5 py-3">
+                        <h4>A.D Algorithm</h4>
+                    </blockquote>
+
+                    <p>Enter a message and a key to encrypt/decrypt the message using A.D algorithm</p>
+
+                    <form id="ad_form" action="./forms/AD.php" method="post" novalidate="novalidate">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="ad_text" placeholder="Message" name="message">                               
+                        </div>
+
+                        <input hidden id="ad_type" name="ad_type" />
+
+                        <div class="input-group mb-3">
+                            <button 
+                                id="ad_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="submit" 
+                            >
+                                Encrypt
+                            </button>
+                            <button 
+                                id="ad_decrypt_button" class="btn btn-main font-weight-bold"
+                                type="submit" 
+                            >
+                                Decrypt
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="ad_container_success" role="alert">
+                    </div>
+                    <div id="ad_container_error" role="alert">
+                    </div>
+                </div>
+                <div class="col-lg-12 my-5">
+
+                    <blockquote class="p-3 mt-5">
+                        <h4>T&M Algorithm</h4>
+                    </blockquote>
+
+                    <p>Enter a message and a key to encrypt/decrypt the message using T&M algorithm</p>
+
+                    <form id="tm_form" action="./forms/TM.php" method="post" novalidate="novalidate">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="tm_text" placeholder="Message" name="message">                               
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="abdul_key" placeholder="Abdulrahman Key" name="abdul_key">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="aes_key" placeholder="AES Key" name="aes_key">
+                        </div>
+
+                        <input hidden id="tm_type" name="tm_type" />
+
+                        <div class="input-group mb-3">
+                            <button 
+                                id="tm_encrypt_buton" class="btn btn-main font-weight-bold mr-3"
+                                type="submit" 
+                            >
+                                Encrypt
+                            </button>
+                            <button 
+                                id="tm_decrypt_button" class="btn btn-main font-weight-bold"
+                                type="submit" 
+                            >
+                                Decrypt
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="tm_container" style="word-break: break-all;">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -292,7 +296,7 @@ Footer
                         <a href="index.php">
                             <?php
 							require './components/svg.php';
-						?>
+						    ?>
                         </a>
 
                         <p class="mt-3">Copyright
@@ -331,8 +335,8 @@ Footer
     <script src="js/script.js"></script>
     <!-- Submit Forms -->
     <script src="js/forms/Abdul.js"></script>
-    <!-- <script src="js/forms/TM.js"></script>
-    <script src="js/forms/AD.js"></script> -->
+    <script src="js/forms/TM.js"></script>
+    <script src="js/forms/AD.js"></script>
     <script src="js/forms/AES.js"></script>
 </body>
 

@@ -4,8 +4,9 @@ require '../controllers/T&M.php';
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['tm_type'] == 'E' ) {
     if( 
-        $_POST['message'] != '' 
-        && $_POST['key'] != '' 
+        $_POST['message'] != ''
+        || $_POST['abdul_key'] != ''
+        || $_POST['aes_key'] != ''
     ) {
         // refuse numbers, spaces and special letters
         if(!ctype_alpha($_POST['message'])){
@@ -25,7 +26,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['tm_type'] == 'E' ) {
 
             // encrypt
             $new_T_M = new T_M();
-            $cipherText = $new_T_M->encrypt($message, $_POST['key']);
+            $cipherText = $new_T_M->encrypt($message, $_POST['abdul_key'], $_POST['aes_key']);
             $message = 'Your message was encrypted successfully!';
 
             // return
@@ -49,11 +50,12 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['tm_type'] == 'E' ) {
 elseif( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['tm_type'] == 'D'  ) {
     if( 
         $_POST['message'] != '' 
-        && $_POST['key'] != '' 
+        || $_POST['abdul_key'] != ''
+        || $_POST['aes_key'] != '' 
     ) {
         // decrypt
         $new_T_M = new T_M();
-        $cipherText = $new_T_M->decrypt($_POST['message'], $_POST['key']);
+        $cipherText = $new_T_M->decrypt($_POST['message'], $_POST['abdul_key'], $_POST['aes_key']);
         $message = 'Your message was encrypted successfully!';
 
         // return

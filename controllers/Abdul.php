@@ -27,6 +27,9 @@
                     continue;
                 }
             };
+
+            $this->letters_array = $all_letters;
+
             $index=0;
             for($x=0; $x<5; $x++){
                 $this->letters_table[$x] = array();
@@ -35,13 +38,6 @@
                 };
                 $index += 5;
             };
-            $this->letters_array = array_merge(
-                $this->letters_table[0], 
-                $this->letters_table[1], 
-                $this->letters_table[2], 
-                $this->letters_table[3], 
-                $this->letters_table[4]
-            );
         }
 
         function handleMessage() {

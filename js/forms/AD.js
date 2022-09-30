@@ -43,7 +43,6 @@ $(document).ready(function () {
                         "</div>"
                     );
                     $("#ad_container_error").html('');
-                    $("#ad_text").val(data.data);
                 } else {
                     $("#ad_container_error").html(
                         "<div id='ad_container_error' class='text-center alert alert-danger w-100' role='alert'>" +

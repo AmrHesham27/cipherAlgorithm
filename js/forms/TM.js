@@ -29,9 +29,6 @@ $(document).ready(function () {
                 aes_key: $("#aes_key").val(),
                 tm_type: $("#tm_type").val()
             };
-
-            console.log(formData)
-
             $.ajax({
                 type: "POST",
                 url: "forms/TM.php",
@@ -47,7 +44,6 @@ $(document).ready(function () {
                         data.data +
                         '</div>'
                     );
-                    $("#tm_text").val(data.data);
                 } else {
                     $("#tm_container").html(
                         '<div id="form-result" class="text-center alert alert-danger w-100" role="alert">' +

@@ -5,10 +5,20 @@ require '../controllers/Abdul.php';
 if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['abdul_type'] == 'E' ) {
     if( 
         $_POST['message'] != '' 
-        || $_POST['key'] != '' 
+        && $_POST['key'] != '' 
     ) {
         // refuse numbers, spaces and special letters
         if(!ctype_alpha($_POST['message'])){
+            $message = 'Please enter only letters a-z';
+            $status_array = array( 
+                'data' => null,
+                'status' => 'false', 
+                'message' => $message
+            );
+            echo json_encode($status_array);
+        }
+
+        elseif(!ctype_alpha($_POST['key'])){
             $message = 'Please enter only letters a-z';
             $status_array = array( 
                 'data' => null,
@@ -48,10 +58,20 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['abdul_type'] == 'E' ) {
 elseif( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['abdul_type'] == 'D'  ) {
     if( 
         $_POST['message'] != '' 
-        || $_POST['key'] != '' 
+        && $_POST['key'] != '' 
     ) {
         // refuse numbers, spaces and special letters
         if(!ctype_alpha($_POST['message'])){
+            $message = 'Please enter only letters a-z';
+            $status_array = array( 
+                'data' => null,
+                'status' => 'false', 
+                'message' => $message
+            );
+            echo json_encode($status_array);
+        }
+
+        elseif(!ctype_alpha($_POST['key'])){
             $message = 'Please enter only letters a-z';
             $status_array = array( 
                 'data' => null,

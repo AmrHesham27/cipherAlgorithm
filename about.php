@@ -14,7 +14,7 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Meghna | Responsive Multipurpose Parallax HTML5 Template</title>
+    <title>Triple Cipher Algorithm</title>
 
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -75,9 +75,9 @@ Fixed Navigation
                     <!-- logo -->
                     <a class="navbar-brand logo" href="index.php">
                         <?php
-            require './components/svg.php';
-          ?>
-                        Abdulrahman Cipher
+                            require './components/svg.php';
+                        ?>
+                        Triple cipher algorithm
                     </a>
                     <!-- /logo -->
 
@@ -112,7 +112,7 @@ End Fixed Navigation
                 </div>
                 <div class="col-lg-6">
                     <div class="content-block">
-                        <h2 class="mb-5 pb-5">About Abdulrahman Cipher</h2>
+                        <h2 class="mb-5 pb-5">About triple cipher algorithm</h2>
                         <blockquote class="p-3 mt-5">
                             <h4>What is AES?</h4>
                         </blockquote>
@@ -204,22 +204,22 @@ End Fixed Navigation
                                 <table class="table table-dark table-bordered mt-4">
                                     <tbody>
                                         <?php
-                                foreach(
-                                    array(
-                                        array('F', 'O', 'D', 'A', 'B'),
-                                        array('C', 'E', 'G', 'H', 'I/J'),
-                                        array('K', 'L', 'M', 'N', 'P'),
-                                        array('Q', 'R', 'S', 'T', 'U'),
-                                        array('V', 'W', 'X', 'Y', 'Z')
-                                    ) as $array)
-                                    { 
-                                        echo "<tr>";
-                                        foreach( $array as $letter ){
-                                            echo "<td class='text-center'>".$letter."</td>";
-                                        };
-                                        echo "</tr>";
-                                    };
-                            ?>
+                                            foreach(
+                                                array(
+                                                    array('F', 'O', 'D', 'A', 'B'),
+                                                    array('C', 'E', 'G', 'H', 'I/J'),
+                                                    array('K', 'L', 'M', 'N', 'P'),
+                                                    array('Q', 'R', 'S', 'T', 'U'),
+                                                    array('V', 'W', 'X', 'Y', 'Z')
+                                                ) as $array)
+                                                { 
+                                                    echo "<tr>";
+                                                    foreach( $array as $letter ){
+                                                        echo "<td class='text-center'>".$letter."</td>";
+                                                    };
+                                                    echo "</tr>";
+                                                };
+                                        ?>
                                     </tbody>
                                 </table>
                             </li>

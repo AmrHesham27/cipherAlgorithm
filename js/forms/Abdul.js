@@ -7,10 +7,6 @@
  * #abdul_key
  * #abdul_container
  */
-$('#abdul_shift_buton').click(function () {
-    $('#abdul_text').val( $('#form-result-abdul').text() );
-});
-
 $('#abdul_encrypt_buton').click(function () {
     $('#abdul_type').val('E');
 });

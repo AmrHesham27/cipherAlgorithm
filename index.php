@@ -13,7 +13,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-	<title>Abdulrahman Cipher</title>
+	<title>Triple Cipher Algorithm</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -73,7 +73,7 @@ Welcome Slider
 		<source src="images/banner/hero-video.mp4" type="video/mp4">
 	</video> -->
  	<div class="block">
- 		<h1>Abdulrahman Cipher</h1>
+ 		<h1>Triple cipher algorithm</h1>
  		<a href="./start.php" class="btn btn-transparent smooth-scroll mx-1">Start</a>
 		<a href="./about.php" class="btn btn-transparent smooth-scroll mx-1">About</a>
  	</div>

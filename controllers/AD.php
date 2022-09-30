@@ -59,7 +59,7 @@ class AD {
         return $pairs_array;
     }
 
-    public function encrypt_one_pair ($array) {
+    public function encrypt_one_pair ($array) { // 0E05
         // check if same row
         if($array[0] == $array[2]){
             foreach([1 => $array[1], 3 => $array[3]] as $key => $letter_array) {
@@ -67,7 +67,10 @@ class AD {
                     $old_index = array_search($letter_array, $this->Hex_index);
                     $new_index = $old_index + 1;
                     $array[$key] = $this->Hex_index[$new_index];
-                };
+                }
+                else {
+                    $array[$key] = $this->Hex_index[0];
+                }
             }
             return $array[0] . $array[1] . $array[2] . $array[3];
         }
@@ -78,6 +81,9 @@ class AD {
                     $old_index = array_search($letter_array, $this->Hex_index);
                     $new_index = $old_index + 1;
                     $array[$key] = $this->Hex_index[$new_index];
+                }
+                else {
+                    $array[$key] = $this->Hex_index[0];
                 }
             }
             return $array[0] . $array[1] . $array[2] . $array[3];
@@ -93,6 +99,7 @@ class AD {
         };
     }
 
+    // make text to ['0D0E', '2F4E']
     public function handleText_decrypt ($cipher) {
         $cipher = str_split(strtoupper(trim($cipher)));
         $letters_array = array();
@@ -114,7 +121,10 @@ class AD {
                     $old_index = array_search($letter_array, $this->Hex_index);
                     $new_index = $old_index - 1;
                     $array[$key] = $this->Hex_index[$new_index];
-                };
+                }
+                else { 
+                    $array[$key] = 'F'; 
+                }
             }
             return $array[0] . $array[1] . $array[2] . $array[3];
         }
@@ -126,6 +136,7 @@ class AD {
                     $new_index = $old_index - 1;
                     $array[$key] = $this->Hex_index[$new_index];
                 }
+                else $array[$key] = 'F';
             }
             return $array[0] . $array[1] . $array[2] . $array[3];
         }

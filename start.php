@@ -14,7 +14,7 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Meghna | Responsive Multipurpose Parallax HTML5 Template</title>
+    <title>Triple Cipher Algorithm</title>
 
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -77,7 +77,7 @@ Fixed Navigation
                         <?php
                             require './components/svg.php';
                         ?>
-                        Abdulrahman Cipher
+                        Triple cipher algorithm 
                     </a>
                     <!-- /logo -->
 
@@ -134,12 +134,6 @@ End Fixed Navigation
                                 Encrypt
                             </button>
                             <button 
-                                id="abdul_shift_buton" class="btn btn-main font-weight-bold mr-3"
-                                type="button" 
-                            >
-                                Shift
-                            </button>
-                            <button 
                                 id="abdul_decrypt_button" class="btn btn-main font-weight-bold"
                                 type="submit" 
                             >
@@ -151,7 +145,7 @@ End Fixed Navigation
                     <div id="abdul_container">
                     </div>
                 </div>
-                <div class="col-lg-12 my-5">
+                <div class="col-lg-12 my-1">
 
                     <blockquote class="p-3 mt-5 py-3">
                         <h4>AES Algorithm</h4>
@@ -178,12 +172,6 @@ End Fixed Navigation
                                 Encrypt
                             </button>
                             <button 
-                                id="aes_shift_buton" class="btn btn-main font-weight-bold mr-3"
-                                type="button" 
-                            >
-                                Shift
-                            </button>
-                            <button 
                                 id="aes_decrypt_button" class="btn btn-main font-weight-bold"
                                 type="submit" 
                             >
@@ -194,10 +182,10 @@ End Fixed Navigation
 
                     <div id="aes_container_success" role="alert" style="word-break: break-all;">
                     </div>
-                    <div id="aes_container_error" role="alert">
+                    <div id="aes_container_error" role="alert" style="word-break: break-all;">
                     </div>
                 </div>
-                <div class="col-lg-12 my-5">
+                <div class="col-lg-12 my-1">
 
                     <blockquote class="p-3 mt-5 py-3">
                         <h4>A.D Algorithm</h4>
@@ -233,7 +221,7 @@ End Fixed Navigation
                     <div id="ad_container_error" role="alert">
                     </div>
                 </div>
-                <div class="col-lg-12 my-5">
+                <div class="col-lg-12 my-1">
 
                     <blockquote class="p-3 mt-5">
                         <h4>T&M Algorithm</h4>

@@ -5,8 +5,8 @@ require '../controllers/T&M.php';
 if( $_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['tm_type'] == 'E' ) {
     if( 
         $_POST['message'] != ''
-        || $_POST['abdul_key'] != ''
-        || $_POST['aes_key'] != ''
+        && $_POST['abdul_key'] != ''
+        && $_POST['aes_key'] != ''
     ) {
         // refuse numbers, spaces and special letters
         if(!ctype_alpha($_POST['message'])){

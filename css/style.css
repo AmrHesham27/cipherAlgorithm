@@ -1981,3 +1981,8 @@ blockquote {
 footer {
   background-color: #0c2097;
 }
+
+.about_image {
+  width: 100%;
+  max-width: 100%;
+}

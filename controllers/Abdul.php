@@ -87,6 +87,13 @@
         }
 
         function encrypt($message, $key) {
+            if(!ctype_alpha($message) || !ctype_alpha($key)){
+                return array(
+                    'message' => 'Message and Abdulrahman key should be letters only a-z', 
+                    'status' => 'false'
+                );
+            };
+
             $this->setValues($message, $key);
             $this->setTable();
             $this->handleMessage();
@@ -99,10 +106,20 @@
                 $cipherText = $cipherText . $newLetter;
             };
 
-            return $cipherText;
+            return array(
+                'data' => $cipherText, 
+                'status' => 'true'
+            );
         }
 
         function decrypt($message, $key) {
+            if(!ctype_alpha($message) || !ctype_alpha($key)){
+                return array(
+                    'message' => 'Message and Abdulrahman key should be letters only a-z', 
+                    'status' => 'false'
+                );
+            };
+            
             $this->setValues($message, $key);
             $this->setTable();
             $this->handleMessage();
@@ -115,7 +132,10 @@
                 $decrypted_message = $decrypted_message . $newLetter;
             };
 
-            return $decrypted_message;
+            return array(
+                'data' => $decrypted_message, 
+                'status' => 'true'
+            );
         }
     }
 

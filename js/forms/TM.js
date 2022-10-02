@@ -25,8 +25,8 @@ $(document).ready(function () {
             $('#tm_decrypt_button').text("...Loading");
             var formData = {
                 message: $("#tm_text").val(),
-                abdul_key: $("#abdul_key").val(),
-                aes_key: $("#aes_key").val(),
+                abdul_key: $("#abdul_key_tm").val(),
+                aes_key: $("#aes_key_tm").val(),
                 tm_type: $("#tm_type").val()
             };
             $.ajax({

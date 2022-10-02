@@ -103,6 +103,18 @@ Fixed Navigation
     <!--
 End Fixed Navigation
 ==================================== -->
+    <section class="call-to-action section-sm bg-1 overly">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="./x.pdf" download="Triple Cipher Algorithm" class="btn btn-main font-weight-bold">
+                        Download PDF
+                    </a>
+                </div>
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
+
 
     <section class="sectionY section about-2 padding-0" id="about">
         <div class="container-fluid p-0">

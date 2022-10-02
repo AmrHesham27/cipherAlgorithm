@@ -224,7 +224,7 @@ End Fixed Navigation
                 <div class="col-lg-12 my-1">
 
                     <blockquote class="p-3 mt-5">
-                        <h4>T&M Algorithm</h4>
+                        <h4>TA&M Algorithm</h4>
                     </blockquote>
 
                     <p>Enter a message and a key to encrypt/decrypt the message using T&M algorithm</p>
@@ -235,11 +235,11 @@ End Fixed Navigation
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="abdul_key" placeholder="Abdulrahman Key" name="abdul_key">
+                            <input type="text" class="form-control" id="abdul_key_tm" placeholder="Abdulrahman Key" name="abdul_key">
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="aes_key" placeholder="AES Key" name="aes_key">
+                            <input type="text" class="form-control" id="aes_key_tm" placeholder="AES Key" name="aes_key">
                         </div>
 
                         <input hidden id="tm_type" name="tm_type" />

@@ -159,7 +159,10 @@ class AD {
             $new_cipher = $this->encrypt_one_pair($pair);
             $cipher = $cipher . $new_cipher;
         };
-        return $cipher;
+        return array(
+            'data' => $cipher, 
+            'status' => 'true'
+        );
     }
 
     public function decrypt($cipher) {
@@ -179,7 +182,10 @@ class AD {
                 $text = $text . $hex_index;
             }
         };
-        return $text;
+        return array(
+            'data' => $text, 
+            'status' => 'true'
+        );
     }
 }
 

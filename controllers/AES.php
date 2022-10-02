@@ -12,7 +12,13 @@ class AES {
         $ciphertext = openssl_encrypt($plaintext, $this->method, $key, OPENSSL_RAW_DATA, $iv);
         $hash = hash_hmac('sha256', $ciphertext . $iv, $key, true);
         
-        return urlencode($iv . $hash . $ciphertext);
+        $result = urlencode($iv . $hash . $ciphertext);
+
+        return array( 
+            'data' => $result, 
+            'status' => 'true', 
+            'message' => 'Your message was encrypted successfully!'
+        );
     }
     
     function decrypt($ivHashCiphertext, $password) {
@@ -24,16 +30,27 @@ class AES {
         $ciphertext = substr($ivHashCiphertext, 48);
         $key = hash('sha256', $password, true);
     
-        if (!hash_equals(hash_hmac('sha256', $ciphertext . $iv, $key, true), $hash)) return 'invalid';
+        if (!hash_equals(hash_hmac('sha256', $ciphertext . $iv, $key, true), $hash)) {    
+            return array( 
+                'status' => 'false', 
+                'message' => 'This cipher was not encrypted with AES algorithm!'
+            );
+        }
     
-        return openssl_decrypt($ciphertext, $this->method, $key, OPENSSL_RAW_DATA, $iv);
+        $result = openssl_decrypt($ciphertext, $this->method, $key, OPENSSL_RAW_DATA, $iv);
+
+        return array( 
+            'data' => $result, 
+            'status' => 'true', 
+            'message' => 'Your message was decrypted successfully!'
+        );
     }
 }
 
 /* $AES_algorithm = new AES();
 
-//echo $AES_algorithm->encrypt('UAGZ', 'food');
+//print_r($AES_algorithm->encrypt('UAGZ', 'food'));
 
-echo $AES_algorithm->decrypt('n%DA5%BBN%BBh5%E9%98e%BAFs%26%23%AB%23%1AH%BD%97n%93%80A%8F%F5pb%937%F6%E4%D2%C3%0C%D7%23%99%C9%14X%E8%03%D5Ca%B0h%DF%95%D7%3BX%00%93%07%9DT%ACj%CF1', 'food') */
+print_r($AES_algorithm->decrypt('%C1xcJB%26%CA%3B%7D%82%3D5%D1m%9B%C9%5E%A6%F7%C2%DA%B0%5D%FDk%A4e%26%88%BD%F79%A6%9E%FD_%EF%19%2A%1D%07%1BF%D27%E7%7Bh%E8%12%0Ci%19%EA%94%83%00%80%7C_%40%5EKe', 'food')) */
 
 ?>
